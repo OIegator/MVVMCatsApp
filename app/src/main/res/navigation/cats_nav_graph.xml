@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/cats_nav_graph"
+    app:startDestination="@id/homeCatsFragment">
+
+    <fragment
+        android:id="@+id/homeCatsFragment"
+        android:name="com.olegator.mvvmcatsapp.ui.fragments.HomeCatsFragment"
+        android:label="HomeCatsFragment" >
+        <action
+            android:id="@+id/action_homeCatsFragment_to_catCardFragment"
+            app:destination="@id/catCardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/favCatsFragment"
+        android:name="com.olegator.mvvmcatsapp.ui.fragments.FavCatsFragment"
+        android:label="FavCatsFragment" >
+        <action
+            android:id="@+id/action_favCatsFragment_to_catCardFragment"
+            app:destination="@id/catCardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/downloadCatsFragment"
+        android:name="com.olegator.mvvmcatsapp.ui.fragments.DownloadCatsFragment"
+        android:label="DownloadCatsFragment" />
+    <fragment
+        android:id="@+id/catCardFragment"
+        android:name="com.olegator.mvvmcatsapp.ui.fragments.CatCardFragment"
+        android:label="CatCardFragment" >
+        <argument
+            android:name="cat"
+            app:argType="com.olegator.mvvmcatsapp.api.models.images.CatImage" />
+    </fragment>
+</navigation>

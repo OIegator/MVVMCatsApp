@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MVVMCatsApp</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="download">Download</string>
+    <string name="cat_image">imageOfCat</string>
+    <string name="CatImage">CatImage</string>
+    <string name="Fab">FavoriteButton</string>
+    <string name="unknown">Unknown</string>
+    <string name="nope_it">Nope it</string>
+    <string name="like_it">Like it</string>
+    <string name="breed_filter_hint">Breed</string>
+    <string-array name="breeds">
+        <item>Abyssinian</item>
+        <item>Aegean</item>
+        <item>American Curl</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>

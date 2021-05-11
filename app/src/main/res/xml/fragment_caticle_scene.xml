@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/iv_cat"
+               motion:framePosition="100"
+               android:elevation="3dp" />
+           <KeyAttribute
+               motion:motionTarget="@+id/iv_cat"
+               android:translationY="400dp" />
+           <KeyAttribute
+               motion:motionTarget="@+id/iv_cat"
+               android:scaleX="2" />
+       </KeyFrameSet>
+        <OnSwipe
+            motion:touchAnchorId="@+id/iv_cat"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLike"
+            motion:layout_editor_absoluteY="400dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/btnDislike" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDislike"
+            motion:layout_editor_absoluteY="400dp"
+            motion:layout_editor_absoluteX="96dp"
+            motion:layout_constraintStart_toEndOf="@+id/btnLike"
+            motion:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:id="@+id/iv_cat" />
+    </ConstraintSet>
+</MotionScene>
